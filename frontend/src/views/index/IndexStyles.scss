@@ -1,0 +1,115 @@
+@import "../../static/styles/variables";
+
+.content {
+  background: $background;
+  width: 100vw;
+  height: 100vh;
+  box-sizing: content-box;
+  padding: 0;
+  margin: 0;
+  font-family: 'Poppins';
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .dashboard {
+    width: 95%;
+    height: 95%;
+
+    .large-title {
+      font-weight: 500;
+      color: $title_color;
+    }
+
+    .data {
+      margin-top: 2em;
+      background: $light;
+      padding: 1em;
+    }
+  }
+}
+
+// lista horizontal
+.horizontal-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  overflow-x: scroll;
+}
+
+// Lista vertical
+.vertical-list {
+  display: flex;
+  flex-direction: column;
+
+  .top-list {
+    display: flex;
+    flex-direction: row;
+    max-width: 100%;
+    justify-content: space-between;
+    text-align: center;
+  }
+
+  .item-list {
+    display: flex;
+    flex-direction: row;
+    max-width: 100%;
+    justify-content: space-between;
+    text-align: center;
+
+    background: $background;
+    padding: 1em 0;
+    margin-top: 0.5em;
+  }
+
+  .top-list-id {
+    width: 10%;
+  }
+
+  .top-list-stats, .top-list-down, .top-list-up, .top-list-diff {
+    width: 25%;
+  }
+}
+
+.square {
+  min-width: 15em;
+  max-width: fit-content;
+  background: $square_bkg;
+  color: $light;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  margin: 0 0.5em;
+  padding: 1em;
+
+  div {
+    margin-top: 2em;
+
+    p {
+      font-size: 0.8rem;
+      font-weight: 300;
+    }
+
+    h2 {
+      color: $light;
+      font-weight: 600;
+      font-size: 2rem;
+    }
+  }
+
+  small {
+    margin-top: 3em;
+    font-weight: 200;
+  }
+}
+
+.square:hover {
+  background: $square_bkg;
+  color: $light;
+}
+
+.full {color: red;}
+.empty { color: green }

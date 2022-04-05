@@ -5,6 +5,7 @@ def show(
         full, empty
 ):
     print(f"""
+----------------------
 PARADA #{stop_number}
 
 ANTES

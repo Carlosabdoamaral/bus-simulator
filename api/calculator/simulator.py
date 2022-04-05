@@ -1,11 +1,11 @@
 import random
-from calculator.difference import difference
-from calculator.is_full import is_full
-from calculator.is_empty import is_empty
-from show import show
-
+from api.calculator.difference import difference
+from api.calculator.is_full import is_full
+from api.calculator.is_empty import is_empty
+from api.show.show import show
 
 def simulator():
+    global up_new
     up_old_arr = []
     up_new_arr = []
 
@@ -29,13 +29,11 @@ def simulator():
             up_new = random.randint(0, 20)
             up_new_arr.append(up_new)
 
-
             # DOWN
             down_old = 0
             down_old_arr.append(down_old)
             down_new = random.randint(0, 40)
             down_new_arr.append(down_new)
-
 
         # ÚLTIMA PARADA
         elif stop_number == 20:
@@ -71,6 +69,4 @@ def simulator():
 
         stop_number += 1
 
-
-if __name__ == '__main__':
-    simulator()
+    return [up_old_arr, up_new_arr, down_old_arr, down_new_arr]
