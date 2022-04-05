@@ -3,7 +3,8 @@
 .content {
   background: $background;
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
+  height: fit-content;
   box-sizing: content-box;
   padding: 0;
   margin: 0;
@@ -17,16 +18,24 @@
   .dashboard {
     width: 95%;
     height: 95%;
+    margin-bottom: 1em;
 
     .large-title {
+      margin-top: 2em;
       font-weight: 500;
       color: $title_color;
+    }
+
+    .by {
+      font-size: 0.8rem;
+      color: grey;
     }
 
     .data {
       margin-top: 2em;
       background: $light;
       padding: 1em;
+      border-radius: 10px;
     }
   }
 }
@@ -37,6 +46,7 @@
   flex-direction: row;
   justify-content: space-between;
   overflow-x: scroll;
+  margin-top: 2em;
 }
 
 // Lista vertical
@@ -58,7 +68,7 @@
     max-width: 100%;
     justify-content: space-between;
     text-align: center;
-
+    border-radius: 10px;
     background: $background;
     padding: 1em 0;
     margin-top: 0.5em;
@@ -74,15 +84,15 @@
 }
 
 .square {
-  min-width: 15em;
-  max-width: fit-content;
+  min-width: 25%;
   background: $square_bkg;
   color: $light;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: flex-start;
-  margin: 0 0.5em;
+  margin-right: 0.5em;
+  border-radius: 10px;
   padding: 1em;
 
   div {
@@ -113,3 +123,6 @@
 
 .full {color: red;}
 .empty { color: green }
+.normal {
+  color: $square_bkg;
+}
