@@ -15,12 +15,16 @@ def getData():
     up_new_list = data[1]
     down_old_list = data[2]
     down_new_list = data[3]
+    up_dif = data[4]
+    down_dif = data[5]
 
     return jsonify(
         up_old_arr=up_old_list,
         up_new_arr=up_new_list,
+        up_diff=up_dif,
         down_old_arr=down_old_list,
-        down_new_arr=down_new_list
+        down_new_arr=down_new_list,
+        down_diff=down_dif
     )
 
 

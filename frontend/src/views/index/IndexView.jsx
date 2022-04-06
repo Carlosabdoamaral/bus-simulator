@@ -22,6 +22,9 @@ export default function IndexView() {
                     let up_new_arr = res.data['up_new_arr']
                     let up_old_arr = res.data['up_old_arr']
 
+                    let up_diff = res.data['up_diff']
+                    let down_diff = res.data['down_diff']
+
                     let status = ''
                     let status_class = ''
 
@@ -56,7 +59,9 @@ export default function IndexView() {
                 <p class="top-list-stats ${status_class}">${status}</p>
                 <p class="top-list-down">${d_o} -> ${d_n}</p>
                 <p class="top-list-up">${u_o} -> ${u_n}</p>
-                <p class="top-list-diff">diff</p>
+                <p class="top-list-diff">${down_diff[i]}</p>
+                <p class="top-list-diff">${up_diff[i]}</p>
+               
             `
 
                     listRef.appendChild(item)
@@ -67,45 +72,45 @@ export default function IndexView() {
     return (
         <main className={"content"}>
             <div className={"dashboard"}>
-                <h1 className={"large-title"}>Dashboard</h1>
+                <h1 className={"large-title"}>Painel de controle</h1>
                 <small className={"by"}>Por: Carlos Alberto Barcelos do Amaral</small>
 
                 <div className={"horizontal-list"}>
-                    <div className={"square"}>
-                        <div>
-                            <p>Total de passageiros</p>
-                            <h2>100.002</h2>
-                        </div>
+                    {/*<div className={"square"}>*/}
+                    {/*    <div>*/}
+                    {/*        <p>Total de passageiros</p>*/}
+                    {/*        <h2>100.002</h2>*/}
+                    {/*    </div>*/}
 
-                        <small>Analisado em {dayFormated}</small>
-                    </div>
+                    {/*    <small>Analisado em {dayFormated}</small>*/}
+                    {/*</div>*/}
 
-                    <div className={"square"}>
-                        <div>
-                            <p>Total de passageiros</p>
-                            <h2>100.002</h2>
-                        </div>
+                    {/*<div className={"square"}>*/}
+                    {/*    <div>*/}
+                    {/*        <p>Total de passageiros</p>*/}
+                    {/*        <h2>100.002</h2>*/}
+                    {/*    </div>*/}
 
-                        <small>Analisado em {dayFormated}</small>
-                    </div>
+                    {/*    <small>Analisado em {dayFormated}</small>*/}
+                    {/*</div>*/}
 
-                    <div className={"square"}>
-                        <div>
-                            <p>Total de passageiros</p>
-                            <h2>100.002</h2>
-                        </div>
+                    {/*<div className={"square"}>*/}
+                    {/*    <div>*/}
+                    {/*        <p>Total de passageiros</p>*/}
+                    {/*        <h2>100.002</h2>*/}
+                    {/*    </div>*/}
 
-                        <small>Analisado em {dayFormated}</small>
-                    </div>
+                    {/*    <small>Analisado em {dayFormated}</small>*/}
+                    {/*</div>*/}
 
-                    <div className={"square"}>
-                        <div>
-                            <p>Total de passageiros</p>
-                            <h2>100.002</h2>
-                        </div>
+                    {/*<div className={"square"}>*/}
+                    {/*    <div>*/}
+                    {/*        <p>Total de passageiros</p>*/}
+                    {/*        <h2>100.002</h2>*/}
+                    {/*    </div>*/}
 
-                        <small>Analisado em {dayFormated}</small>
-                    </div>
+                    {/*    <small>Analisado em {dayFormated}</small>*/}
+                    {/*</div>*/}
                 </div>
 
                 <div className={"data"}>
@@ -115,7 +120,8 @@ export default function IndexView() {
                             <p className={"top-list-stats"}>Status</p>
                             <p className={"top-list-down"}>Sentadas</p>
                             <p className={"top-list-up"}>Em pé</p>
-                            <p className={"top-list-diff"}>Diferença</p>
+                            <p className={"top-list-diff"}>Diferença sentadas</p>
+                            <p className={"top-list-diff"}>Diferença em pé</p>
                         </div>
 
                         <div id={"list"}/>

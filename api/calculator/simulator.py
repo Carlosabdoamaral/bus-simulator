@@ -5,12 +5,14 @@ from api.calculator.is_empty import is_empty
 from api.show.show import show
 
 def simulator():
-    global up_new
+    global up_new, up_dif, down_dif
     up_old_arr = []
     up_new_arr = []
+    up_dif_arr = []
 
     down_old_arr = []
     down_new_arr = []
+    down_dif_arr = []
 
     stop_number = 0
 
@@ -65,8 +67,11 @@ def simulator():
         full = is_full(up_new, down_new)
         empty = is_empty(up_new, down_new)
 
+        down_dif_arr.append(down_dif)
+        up_dif_arr.append(up_dif)
+
         show(stop_number, up_new, up_old, up_dif, down_new, down_old, down_dif, full, empty)
 
         stop_number += 1
 
-    return [up_old_arr, up_new_arr, down_old_arr, down_new_arr]
+    return [up_old_arr, up_new_arr, down_old_arr, down_new_arr, up_dif_arr, down_dif_arr]
